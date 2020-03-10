@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   width: 1024px;
@@ -19,7 +22,7 @@ header nav ul li {
     padding: 3px;
 }
 main {
-    padding: 1em;
+    width:100%;
 }
 table, td {
     border: 1px solid blue;
@@ -34,11 +37,13 @@ td {
 .col_num {
     text-align: right;
 }
-#continents, #countries, #cities {
+#continents, #countries, #cities, #weather {
     float: left;
-    margin: 1em 1em 0 0;
     padding: 3px;
-    width: 30%;
+    width: 25%;
+}
+#weather {
+    border: 1px solid orange;
 }
 #continents {
     border: 1px solid red;

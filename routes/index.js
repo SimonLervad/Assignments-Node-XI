@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const modContinent = require("../models/handleContinents");
 const modCountry = require("../models/handleCountries");
+const modCity = require("../models/handleCities");
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -26,6 +27,11 @@ router.get('/continents', async function(req, res, next) {
 router.get('/countries/:cont', async function(req, res, next) {
     let countries = await modCountry.getCountries({continent: req.params.cont}, {sort: {name: 1}});
     res.json(countries);
+});
+
+router.get('/cities/:count', async function(req, res, next) {
+    let countries = await modCity.getCountries({country: req.params.count}, {sort: {name: 1}});
+    res.json(cities);
 });
 
 
